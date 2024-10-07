@@ -37,9 +37,10 @@ const memoizeWithMap = (callback) => {
     const cache = new Map();
 
     return function (...args) {
-        const cacheKey = JSON.stringify(...args);
+        const cacheKey = JSON.stringify(args);
 
         if (cache.has(cacheKey)) {
+            console.log(cacheKey);
             console.log("cached in map...");
             return cache.get(cacheKey);
         } else {
@@ -74,7 +75,8 @@ const memoized2 = memoizeWithMap(add);
 
 const ans1 = memoized2(1, 2);
 const ans2 = memoized2(1, 3);
-const ans3 = memoized2(obj1, obj2);
+const ans3 = memoized2("a", "b");
+const ans4 = memoized2(obj1, obj2);
 console.log(memoized2(1, 2));
 console.log(memoized2("a", "b"));
 console.log(memoized2(obj1, obj2));
