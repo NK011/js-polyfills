@@ -1,5 +1,9 @@
 const arr = [1, 2, 3, 4, 5];
 
+const res = arr.filter((num, i, nums) => {
+    return num % 2 == 0;
+})
+
 function myFilter(arr, callback) {
     let ans = [];
     for (let i = 0; i < arr.length; i++) {

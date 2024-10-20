@@ -1,5 +1,11 @@
 const arr = ["a", "b", "c", "d", "e"];
 
+const result = arr.reduce((acc, curr, i, array, ) => {
+  return acc + curr;
+}, 0)
+// if no default value for accumulator provided
+// considers the first value to be the default value
+
 function myReduce(callback, acc = "") {
   for (var i = 0; i < arr.length; i++) {
     acc = callback(acc, arr[i]);

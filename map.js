@@ -1,5 +1,9 @@
 const arr = [1, 2, 3, 4, 5];
 
+const res = arr.map((num, i, nums) => {
+    return num + i;
+})
+
 // this polyfill taks the array and callback
 function myMap(arr, callback) {
     let ans = [];
